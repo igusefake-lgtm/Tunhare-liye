@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071329">
+<title>For Mantasha ✦</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{--night:#061126;--gold:#e8c98b;--cream:#fff4df;--muted:#b8c2d5;--rose:#ef9eae}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,#17315b 0%,transparent 55%),radial-gradient(ellipse at 90% 80%,#201c42 0%,transparent 45%);z-index:-2}
+#stars,#fireworks{position:fixed;inset:0;pointer-events:none;z-index:5}
+#stars{z-index:-1;opacity:.8}
+button{font:inherit;cursor:pointer}
+.serif{font-family:'Cormorant Garamond',serif}
+.eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:.68rem;color:var(--gold)}
+.gold{color:var(--gold)}
+.screen{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:76px 20px 54px;position:relative}
+.panel{width:min(100%,760px);text-align:center}
+.brand{position:absolute;top:22px;left:22px;font-size:.7rem;letter-spacing:.22em;color:#d7dced;text-transform:uppercase}
+.corner{position:absolute;top:22px;right:22px;color:var(--gold);font-size:.78rem;letter-spacing:.1em}
+h1{font-size:clamp(3.1rem,12vw,7rem);line-height:.88;font-weight:500;letter-spacing:-.045em;margin:25px 0}
+h2{font-size:clamp(2.4rem,8vw,4.4rem);font-weight:500;line-height:.96;margin:16px 0}
+h3{font-weight:500}
+p{line-height:1.85;color:var(--muted);font-size:.98rem}
+.rule{width:70px;height:1px;background:var(--gold);margin:24px auto}
+.glow{filter:drop-shadow(0 0 28px #e8c98b55)}
+.btn{border:1px solid #e8c98b99;color:var(--cream);background:linear-gradient(135deg,#e8c98b22,#ffffff05);border-radius:999px;padding:14px 25px;letter-spacing:.04em;transition:.25s}
+.btn:hover{transform:translateY(-2px);background:#e8c98b24;box-shadow:0 8px 32px #e8c98b22}
+.hero-icon{font-size:3rem;display:block;margin:18px auto;color:var(--gold);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-9px)}}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#8290aa}
+.card{border:1px solid #e8c98b38;background:linear-gradient(145deg,#ffffff0a,#ffffff02);border-radius:22px;padding:clamp(22px,5vw,42px);box-shadow:0 25px 80px #0002;backdrop-filter:blur(8px);margin:25px auto}
+.dua{font-size:clamp(1.6rem,5vw,2.5rem);line-height:1.65;color:var(--cream);direction:rtl}
+.translation{font-size:.9rem;color:var(--gold);font-style:italic}
+.letter{max-width:640px;margin:0 auto;text-align:left}
+.letter p{color:#d2d9e7}
+.letter .salutation{font-size:1.8rem;color:var(--gold)}
+.language-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:24px 0}
+.language-tabs button{border:1px solid #ffffff26;background:#ffffff08;color:#d8deea;border-radius:30px;padding:9px 15px;font-size:.8rem}
+.language-tabs button.active{border-color:var(--gold);color:var(--gold);background:#e8c98b12}
+.letter-copy{display:none}.letter-copy.active{display:block;animation:fade .6s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.end-mark{font-size:2.2rem;color:var(--gold);letter-spacing:.3em;margin:24px 0}
+.small{font-size:.78rem;letter-spacing:.08em}
+#fireworks{display:none;background:linear-gradient(#050a19,#10132b);z-index:10}
+#fireworks.show{display:block}
+.firework-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;pointer-events:none}
+.firework-content h2{font-size:clamp(3rem,10vw,6rem);text-shadow:0 0 30px #e8c98b77}
+#closeFireworks{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:12;background:#101b32;color:#fff4df}
+footer{padding:24px;text-align:center;color:#8290aa;font-size:.72rem;letter-spacing:.12em}
+
+#lockScreen{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:22px;background:radial-gradient(ellipse at 50% 30%,#16366a,#050c1d 70%);text-align:center;transition:opacity .8s,visibility .8s}
+#lockScreen.unlocked{opacity:0;visibility:hidden;pointer-events:none}
+.lock-card{width:min(100%,370px);padding:28px 24px;border:1px solid #e8c98b55;border-radius:28px;background:#07152bd9;box-shadow:0 25px 90px #0007;backdrop-filter:blur(12px)}
+.lock-symbol{font-size:2.6rem;color:var(--gold);margin:10px auto 16px;filter:drop-shadow(0 0 18px #e8c98b55)}
+.pin-dots{display:flex;justify-content:center;gap:13px;margin:24px 0}.pin-dot{width:11px;height:11px;border:1px solid var(--gold);border-radius:50%}.pin-dot.filled{background:var(--gold);box-shadow:0 0 12px #e8c98b99}
+.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:250px;margin:0 auto}.keypad button{height:49px;border-radius:14px;border:1px solid #ffffff20;background:#ffffff09;color:var(--cream);font-size:1.05rem}.keypad button:hover{border-color:var(--gold);background:#e8c98b15}.lock-error{min-height:22px;color:var(--rose);font-size:.78rem;margin:12px 0 0}.countdown{display:flex;justify-content:center;gap:10px;margin:22px 0}.countdown div{border:1px solid #e8c98b40;border-radius:12px;padding:10px 12px;min-width:62px;background:#ffffff08}.countdown strong{display:block;color:var(--gold);font-size:1.25rem;font-weight:500}.countdown span{font-size:.58rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+@media(max-width:520px){.brand{left:14px;font-size:.58rem}.corner{right:14px;font-size:.65rem}.screen{padding-left:16px;padding-right:16px}.card{border-radius:18px}}
+</style>
+</head>
+<body>
+<div id="lockScreen">
+  <div class="lock-card">
+    <div class="eyebrow">A little surprise awaits</div>
+    <div class="lock-symbol">♙</div>
+    <h2 class="serif" style="font-size:2.7rem;margin:8px 0 12px">For <span class="gold">Mantasha</span></h2>
+    <p style="font-size:.86rem;margin-bottom:8px">Enter the secret code to unlock your birthday surprise.</p>
+    <div class="pin-dots" id="pinDots"><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span><span class="pin-dot"></span></div>
+    <div class="keypad" id="keypad">
+      <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+      <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+      <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+      <button data-key="clear">⌫</button><button data-key="0">0</button><button data-key="unlock">↵</button>
+    </div>
+    <div class="lock-error" id="lockError">Hint: the demo code is 2610</div>
+    <div class="rule"></div><div class="small gold">✦ MADE JUST FOR YOU ✦</div>
+  </div>
+</div>
+<canvas id="stars"></canvas>
+<div class="brand">A little universe · just for you</div><div class="corner">✦ M</div>
+
+<section class="screen" id="home">
+  <div class="panel">
+    <div class="eyebrow">A day made for someone special</div>
+    <span class="hero-icon glow">✧</span>
+    <p class="small">HAPPY BIRTHDAY</p>
+    <h1 class="serif">Dear <span class="gold">Mantasha</span></h1>
+    <div class="rule"></div>
+    <p>Some people make the world feel softer, brighter, and more beautiful just by being in it.</p>
+    <div class="countdown" aria-label="Birthday countdown display"><div><strong id="cdDays">00</strong><span>Days</span></div><div><strong id="cdHours">00</strong><span>Hours</span></div><div><strong id="cdMins">00</strong><span>Minutes</span></div><div><strong id="cdSecs">00</strong><span>Seconds</span></div></div>
+    <button class="btn" onclick="document.querySelector('#dua').scrollIntoView({behavior:'smooth'})">Open your little surprise <span>↗</span></button>
+  </div>
+  <div class="scroll-hint">Scroll slowly ↓</div>
+</section>
+
+<section class="screen" id="dua">
+  <div class="panel">
+    <div class="eyebrow">First, a heartfelt dua</div>
+    <h2 class="serif">May Allah bless <span class="gold">your days</span></h2>
+    <div class="card">
+      <div class="dua serif">اللَّهُمَّ بَارِكْ لَهَا فِي عُمْرِهَا، وَارْزُقْهَا السَّعَادَةَ وَالسَّكِينَةَ</div>
+      <div class="rule"></div>
+      <p class="translation">May Allah bless her life and grant her happiness, peace, and goodness.</p>
+    </div>
+    <p>May your heart always find peace, your path be filled with khair, and every sincere dua bring you closer to what is best for you. Ameen.</p>
+    <button class="btn" onclick="document.querySelector('#envelope').scrollIntoView({behavior:'smooth'})">Open your letter ✉</button>
+  </div>
+</section>
+
+<section class="screen" id="envelope">
+  <div class="panel">
+    <div class="eyebrow">A message sealed with care</div><h2 class="serif">Something <span class="gold">from my heart</span></h2>
+    <div id="envelopeArt" style="margin:35px auto 28px;width:min(78vw,300px);height:190px;position:relative;cursor:pointer" onclick="openEnvelope()" role="button" aria-label="Open the envelope">
+      <div style="position:absolute;inset:18px 0 0;background:linear-gradient(145deg,#e9d6aa,#b88b4c);border-radius:8px;box-shadow:0 20px 50px #0005"></div>
+      <div id="flap" style="position:absolute;inset:18px 0 auto;height:130px;background:linear-gradient(135deg,#f5e6c6,#d3ad70);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s;filter:drop-shadow(0 5px 5px #0002)"></div>
+      <div style="position:absolute;top:75px;left:50%;transform:translateX(-50%);width:46px;height:46px;border-radius:50%;background:#10264a;color:#f4dca7;display:grid;place-items:center;font-size:1.2rem;box-shadow:0 4px 14px #0004">M</div>
+      <div id="letterSlip" style="position:absolute;left:10%;right:10%;top:36px;height:130px;background:#fff4df;color:#1b2940;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;transition:transform .8s;box-shadow:0 4px 20px #0002">A letter for you ✦</div>
+    </div>
+    <p id="envelopeHint">Tap the envelope to open it.</p>
+    <button class="btn" onclick="openEnvelope()">Open envelope ✉</button>
+  </div>
+</section>
+
+<section class="screen" id="letter">
+  <div class="panel">
+    <div class="eyebrow">Words from my heart</div>
+    <h2 class="serif">A letter, <span class="gold">for you.</span></h2>
+    <p>Four languages, one feeling.</p>
+    <div class="language-tabs">
+      <button class="active" data-lang="hinglish">Hinglish</button>
+      <button data-lang="english">English</button>
+      <button data-lang="urdu">Urdu</button>
+      <button data-lang="arabic">Arabic</button>
+    </div>
+    <div class="card letter">
+      <div class="letter-copy active" id="hinglish">
+        <div class="salutation serif">Meri pyaari Mantasha,</div>
+        <p>Happy Birthday. ❤️</p>
+        <p>Main chahta hoon ke tumhari zindagi khushiyon, sukoon aur barkat se bhari rahe. Allah tumhari har achhi dua qubool kare, tumhe hamesha apni hifazat mein rakhe, aur tumhare liye woh raaste khole jo tumhare haq mein behtareen hon.</p>
+        <p>Shayad main har baat perfect tareeke se na keh paun, lekin meri dua hai ke tum hamesha muskurati raho aur tumhe woh saari khushiyan milein jo tum deserve karti ho.</p>
+        <p class="gold">Dil se — tumhare liye, hamesha khair ki dua. ✦</p>
+      </div>
+      <div class="letter-copy" id="english">
+        <div class="salutation serif">My dear Mantasha,</div>
+        <p>Happy Birthday. ❤️</p>
+        <p>I pray that your life is filled with happiness, peace, and blessings. May Allah accept your sincere duas, protect you always, and guide you toward everything that is truly good for you.</p>
+        <p>I may not always find the perfect words, but I hope you keep smiling and receive the kindness, love, and happiness you deserve.</p>
+        <p class="gold">With heartfelt duas, always. ✦</p>
+      </div>
+      <div class="letter-copy" id="urdu" dir="rtl">
+        <div class="salutation serif">میری پیاری منتاشہ،</div>
+        <p>سالگرہ مبارک۔ ❤️</p>
+        <p>میری دعا ہے کہ اللہ تمہاری زندگی کو خوشیوں، سکون اور برکتوں سے بھر دے۔ تمہاری نیک دعائیں قبول فرمائے، تمہیں ہمیشہ اپنی حفاظت میں رکھے، اور تمہارے لیے بہترین راستے کھول دے۔</p>
+        <p>شاید میں ہر بات خوبصورت لفظوں میں نہ کہہ سکوں، لیکن دل سے چاہتا ہوں کہ تم ہمیشہ مسکراتی رہو اور تمہیں وہ تمام خوشیاں ملیں جن کی تم حقدار ہو۔</p>
+        <p class="gold">تمہارے لیے ہمیشہ خیر کی دعا۔ ✦</p>
+      </div>
+      <div class="letter-copy" id="arabic" dir="rtl">
+        <div class="salutation serif">إلى منتاشا العزيزة،</div>
+        <p>عيد ميلاد سعيد. ❤️</p>
+        <p>أسأل الله أن يملأ حياتكِ بالسعادة والسكينة والبركة، وأن يتقبّل دعواتكِ الطيبة، ويحفظكِ دائمًا، ويفتح لكِ أبواب الخير.</p>
+        <p>قد لا أجد الكلمات المثالية دائمًا، لكنني أدعو أن تبقي مبتسمة، وأن تنالي كل خير وفرح تستحقينه.</p>
+        <p class="gold">دعوات صادقة لكِ دائمًا. ✦</p>
+      </div>
+    </div>
+    <button class="btn" onclick="startFireworks()">One last surprise ✨</button>
+  </div>
+</section>
+
+<footer>MADE WITH CARE · FOR MANTASHA ✦</footer>
+
+<div id="fireworks" aria-label="Birthday fireworks show">
+  <canvas id="fireworkCanvas"></canvas>
+  <div class="firework-content">
+    <div><div class="eyebrow">A little sparkle, just for you</div><h2 class="serif">Happy Birthday,<br><span class="gold">Mantasha!</span></h2><p>May your year be full of noor, peace & beautiful surprises. ✨</p></div>
+  </div>
+  <button class="btn" id="closeFireworks" onclick="closeFireworks()">Back to the letter</button>
+</div>
+
+<script>
+// Secret-code lock screen. Change DEMO_CODE below to personalize it.
+const DEMO_CODE='2610'; let pin='';
+const dots=[...document.querySelectorAll('.pin-dot')];
+function updateDots(){dots.forEach((d,i)=>d.classList.toggle('filled',i<pin.length))}
+function handleKey(k){const err=document.getElementById('lockError');if(k==='clear'){pin=pin.slice(0,-1);err.textContent='';updateDots();return}if(k==='unlock'){if(pin===DEMO_CODE){document.getElementById('lockScreen').classList.add('unlocked');err.textContent='Unlocked ✦'}else{err.textContent='Not quite — try again 💫';pin='';updateDots()}return}if(pin.length<4){pin+=k;updateDots();if(pin.length===4)setTimeout(()=>handleKey('unlock'),180)}}
+document.querySelectorAll('#keypad button').forEach(b=>b.addEventListener('click',()=>handleKey(b.dataset.key)));
+addEventListener('keydown',e=>{if(/^\d$/.test(e.key))handleKey(e.key);if(e.key==='Backspace')handleKey('clear');if(e.key==='Enter')handleKey('unlock')});
+// Decorative short countdown, counting down to the next midnight on this device.
+function updateCountdown(){const now=new Date(),end=new Date(now);end.setHours(24,0,0,0);let n=Math.max(0,end-now);const vals=[Math.floor(n/86400000),Math.floor(n/3600000)%24,Math.floor(n/60000)%60,Math.floor(n/1000)%60];['cdDays','cdHours','cdMins','cdSecs'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=String(vals[i]).padStart(2,'0')})}updateCountdown();setInterval(updateCountdown,1000);
+let envelopeOpened=false;function openEnvelope(){if(envelopeOpened)return;envelopeOpened=true;document.getElementById('flap').style.transform='rotateX(180deg)';document.getElementById('letterSlip').style.transform='translateY(-72px)';document.getElementById('envelopeHint').textContent='Your letter is waiting just below ✨';setTimeout(()=>document.querySelector('#letter').scrollIntoView({behavior:'smooth'}),950)}
+
+const starCanvas=document.getElementById('stars'), starCtx=starCanvas.getContext('2d');
+let stars=[];
+function sizeStars(){starCanvas.width=innerWidth*devicePixelRatio;starCanvas.height=innerHeight*devicePixelRatio;starCanvas.style.width=innerWidth+'px';starCanvas.style.height=innerHeight+'px';starCtx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:100},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.5+.2,a:Math.random(),s:Math.random()*.012+.003}))}
+function drawStars(){starCtx.clearRect(0,0,innerWidth,innerHeight);stars.forEach(s=>{s.a+=s.s;if(s.a>1||s.a<.15)s.s*=-1;starCtx.beginPath();starCtx.arc(s.x,s.y,s.r,0,Math.PI*2);starCtx.fillStyle=`rgba(255,235,190,${Math.max(.15,s.a)})`;starCtx.fill()});requestAnimationFrame(drawStars)}
+addEventListener('resize',sizeStars);sizeStars();drawStars();
+
+document.querySelectorAll('.language-tabs button').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.language-tabs button').forEach(b=>b.classList.remove('active'));
+ document.querySelectorAll('.letter-copy').forEach(p=>p.classList.remove('active'));
+ btn.classList.add('active');document.getElementById(btn.dataset.lang).classList.add('active');
+}));
+
+const fw=document.getElementById('fireworks'), fc=document.getElementById('fireworkCanvas'), ctx=fc.getContext('2d');
+let particles=[], raf=null, running=false;
+const colors=['#ffe7a8','#ff9fb4','#8ddcff','#c7a4ff','#ffffff','#ffd166'];
+function resizeFW(){fc.width=innerWidth*devicePixelRatio;fc.height=innerHeight*devicePixelRatio;fc.style.width=innerWidth+'px';fc.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
+function burst(x,y){const color=colors[Math.floor(Math.random()*colors.length)],n=55+Math.floor(Math.random()*35);for(let i=0;i<n;i++){let a=Math.random()*Math.PI*2,sp=Math.random()*4+1;particles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:55+Math.random()*35,max:90,r:Math.random()*2+1,color})}}
+function animateFW(){if(!running)return;ctx.fillStyle='rgba(5,10,25,.22)';ctx.fillRect(0,0,innerWidth,innerHeight);if(Math.random()<.075)burst(Math.random()*innerWidth,Math.random()*innerHeight*.62+innerHeight*.06);particles=particles.filter(p=>p.life>0);particles.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.025;p.vx*=.99;p.vy*=.99;p.life--;ctx.globalAlpha=Math.max(0,p.life/p.max);ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.color;ctx.fill()});ctx.globalAlpha=1;raf=requestAnimationFrame(animateFW)}
+function startFireworks(){fw.classList.add('show');resizeFW();particles=[];running=true;ctx.clearRect(0,0,innerWidth,innerHeight);burst(innerWidth*.5,innerHeight*.3);burst(innerWidth*.25,innerHeight*.42);burst(innerWidth*.75,innerHeight*.4);animateFW()}
+function closeFireworks(){running=false;if(raf)cancelAnimationFrame(raf);fw.classList.remove('show')}
+addEventListener('resize',()=>{if(fw.classList.contains('show'))resizeFW()});
+</script>
+</body>
+</html>
